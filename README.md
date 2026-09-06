@@ -274,9 +274,9 @@ The dashboard uses DAX measures for customer segmentation, revenue analysis, chu
 
 ### High-Value Customers
 
-DAX
-High-Value Customers =
-COUNTROWS(
+ DAX
+ High-Value Customers =
+   COUNTROWS(
     FILTER(
         VALUES(Dim_UniqueCustomer[customer_unique_id]),
         [Customer Revenue] >= 2000
@@ -285,7 +285,7 @@ COUNTROWS(
 
 ### Revenue at Risk
 
-Revenue at Risk =
+ Revenue at Risk =
     VAR ChurnedCustomers =
         CALCULATETABLE(
             VALUES(Dim_UniqueCustomer[customer_unique_id]),
